@@ -1,0 +1,20 @@
+class Rectangle:
+
+    def __init__(self, attr_1, attr_2):
+        self.attr_1 = attr_1
+        self.attr_2 = attr_2
+
+    def name(self):
+        name = "Прямоугольник"
+        return name
+
+    def perimeter(self):
+        perimeter = 2 * (self.attr_1 + self.attr_2)
+        return perimeter
+
+    def area(self):
+        area = self.attr_1 * self.attr_2
+        return area
+
+
+rectangle = Rectangle(10, 20)
