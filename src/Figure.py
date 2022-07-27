@@ -3,13 +3,14 @@ from Triangle import triangle
 from Square import square
 
 class Figure:
-
-    def other_figure(self, area):
-        return area
+    def __init__(self, side):
+        self.side = side
+    def plis(self):
+        return 10
 
     def add_area(self, other_figure):
         return self.area + other_figure.area
 
+fig = Figure(10)
 
-figure = Figure()
-print(triangle(square))
+print(fig.side)

@@ -1,4 +1,6 @@
-class Rectangle:
+from Figure import  Figure
+
+class Rectangle(Figure):
 
     def __init__(self, attr_1, attr_2):
         self.attr_1 = attr_1
@@ -16,5 +18,3 @@ class Rectangle:
         area = self.attr_1 * self.attr_2
         return area
 
-
-rectangle = Rectangle(10, 20)
