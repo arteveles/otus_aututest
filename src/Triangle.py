@@ -1,7 +1,7 @@
 import math
 from src.Figure import Figure
 
-class Triangle(Figure):
+class Triangle():
 
     def __init__(self, attr_1, attr_2, attr_3):
         self.attr_1 = attr_1

@@ -10,10 +10,12 @@ class Rectangle(Figure):
         name = "Прямоугольник"
         return name
 
+    @property
     def perimeter(self):
         perimeter = 2 * (self.attr_1 + self.attr_2)
         return perimeter
 
+    @property
     def area(self):
         area = self.attr_1 * self.attr_2
         return area
