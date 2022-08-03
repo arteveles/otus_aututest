@@ -1,7 +1,8 @@
 import math
 from src.Figure import Figure
 
-class Triangle():
+
+class Triangle(Figure):
 
     def __init__(self, attr_1, attr_2, attr_3):
         self.attr_1 = attr_1
@@ -22,8 +23,6 @@ class Triangle():
     @property
     def area(self):
         area = math.sqrt(
-            self.perimeter * (self.perimeter - self.attr_1) * (self.perimeter - self.attr_2) * (self.perimeter - self.attr_3))
+            self.perimeter * (self.perimeter - self.attr_1) * (self.perimeter - self.attr_2) * (
+                    self.perimeter - self.attr_3))
         return area
-
-triangle = Triangle()
-print(triangle.area)

@@ -1,7 +1,8 @@
 import math
+from src.Figure import Figure
 
 
-class Circle:
+class Circle(Figure):
 
     def __init__(self, attr_1):
         self.attr_1 = attr_1
@@ -19,6 +20,3 @@ class Circle:
     def area(self):
         area = 2 * math.pi * math.pow(self.attr_1, 2)
         return area
-
-
-circle = Circle()

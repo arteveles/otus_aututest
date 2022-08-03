@@ -1,7 +1,8 @@
 import math
+from src.Figure import Figure
 
 
-class Square:
+class Square(Figure):
 
     def __init__(self, attr_1):
         self.attr_1 = attr_1
@@ -19,6 +20,3 @@ class Square:
     def area(self):
         area = math.pow(self.attr_1, 2)
         return area
-
-
-square = Square()

@@ -1,16 +1,14 @@
-from src import Triangle, Rectangle, Square, Circle
-from Triangle import triangle
-from Square import square
-
-
 class Figure:
     def __init__(self, side):
         self.side = side
 
     @property
-    def other_figure(self):
-        pass
+    def perimeter(self):
+        return sum(self.side)
 
     @property
-    def add_area(self, other_figure):
-        return self.area + other_figure.area
+    def add_area(self, figure):
+        if not isinstance(figure, Figure):
+            raise ValueError('Make sure you pass a figure to add area')
+        return self.area + figure.area
+

@@ -1,4 +1,5 @@
-from Figure import  Figure
+from Figure import Figure
+
 
 class Rectangle(Figure):
 
@@ -19,4 +20,3 @@ class Rectangle(Figure):
     def area(self):
         area = self.attr_1 * self.attr_2
         return area
-
