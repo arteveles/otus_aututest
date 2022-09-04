@@ -23,6 +23,26 @@ class Responses:
             else:
                 validate(self.response_json, schema_random_dog_img)
 
+    def validate_all_bread_img(self, schema_all_bread_img):
+        if isinstance(self.response_json, list):
+            for item in self.response_json:
+                validate(item, schema_all_bread_img)
+            else:
+                validate(self.response_json, schema_all_bread_img)
+
+    def validate_sub_bread(self, schema_sub_bread):
+        if isinstance(self.response_json, list):
+            for item in self.response_json:
+                validate(item, schema_sub_bread)
+            else:
+                validate(self.response_json, schema_sub_bread)
+
+    def validate_send_bread(self, schema_send_bread):
+        if isinstance(self.response_json, list):
+            for item in self.response_json:
+                validate(item, schema_send_bread)
+            else:
+                validate(self.response_json, schema_send_bread)
 
     def assert_status_code(self, status_code):
         if isinstance(status_code, list):
