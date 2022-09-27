@@ -1,8 +1,8 @@
 import pytest
 import requests
-from lesson_4.dogs.baseclasses.responses_validation import Responses
+from lesson_4.logic.baseclasses.responses_validation import Responses
 from lesson_4.configuration import DOG_URL, DOG_URL_BREED
-from lesson_4.dogs.schemas.returned_schemas import NAMES, ALL_BREEDS, RANDOM_DOG_IMG, ALL_BREED_IMG, SUB_BREAD, \
+from lesson_4.logic.schemas.returned_schemas import NAMES, ALL_BREEDS, RANDOM_DOG_IMG, ALL_BREED_IMG, SUB_BREAD, \
     SEND_BREAD
 
 
