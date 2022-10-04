@@ -2,7 +2,6 @@ import pytest
 import os
 from selenium import webdriver
 from selenium.webdriver import ChromeOptions, FirefoxOptions
-from lesson_5.data_storage import CHROMEDRIVER_PATH, FIREFOX_PATH, OPERA_PATH
 
 
 def pytest_addoption(parser):
@@ -33,14 +32,14 @@ def driver(request):
         options = FirefoxOptions()
         if headless:
             options.headless = True
-        _driver = webdriver.Firefox(executable_path=os.path.expanduser(FIREFOX_PATH), options=options)
+        _driver = webdriver.Firefox(executable_path=os.path.expanduser(f"{drivers}/geckodriver"), options=options)
     elif browser_name == "chrome":
         options = ChromeOptions()
         if headless:
             options.headless = True
-        _driver = webdriver.Chrome(executable_path=os.path.expanduser(CHROMEDRIVER_PATH), options=options)
+        _driver = webdriver.Chrome(executable_path=os.path.expanduser(f"{drivers}/chromedriver"), options=options)
     elif browser_name == "opera":
-        _driver = webdriver.Opera(executable_path=os.path.expanduser(OPERA_PATH))
+        _driver = webdriver.Opera(executable_path=os.path.expanduser(f"{drivers}/operadriver"))
     else:
         raise ValueError(f"Browser {browser_name} is not supported")
 
