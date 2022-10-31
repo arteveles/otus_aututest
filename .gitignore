@@ -9,6 +9,8 @@ __pycache__/
 
 # Distribution / packaging
 .idea/
+.pytest_cache
+driver/
 .Python
 build/
 develop-eggs/
